@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Problem Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <span class="eyebrow">DEVELOPER TOOLS</span>
+            <h1>Code Workbench</h1>
+            <p>Describe a programming challenge and get a solution to work with.</p>
+        </header>
+        <section class="workspace" aria-labelledby="problem-heading">
+            <div class="section-heading">
+                <div>
+                    <h2 id="problem-heading">Problem</h2>
+                    <p>Include the requirements and any relevant details.</p>
+                </div>
+            </div>
+            <label for="language">Programming language</label>
+            <select id="language">
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="Go">Go</option>
+                <option value="Rust">Rust</option>
+            </select>
+            <label for="problem">Problem description</label>
+            <textarea
+                id="problem"
+                placeholder="Describe the programming problem you want to solve..."
+            ></textarea>
+
+            <button id="solveBtn" type="button">Generate solution</button>
+        </section>
+
+        <section class="result" aria-labelledby="solution-heading">
+            <div class="section-heading">
+                <div>
+                    <h2 id="solution-heading">Solution</h2>
+                    <p>Your generated code will appear below.</p>
+                </div>
+            </div>
+            <pre id="solution"></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

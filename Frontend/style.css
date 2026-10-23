@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #202938;
+    background: #f5f7fa;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 56px 24px;
+}
+
+.container {
+    width: min(100%, 840px);
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    color: #52647c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+h1 {
+    margin: 10px 0 8px;
+    font-size: clamp(30px, 5vw, 42px);
+    letter-spacing: -0.04em;
+}
+
+.page-header p,
+.section-heading p {
+    margin: 0;
+    color: #697586;
+    line-height: 1.6;
+}
+
+.workspace,
+.result {
+    padding: 28px;
+    border: 1px solid #e2e7ee;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(27 39 54 / 5%);
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    margin: 0 0 6px;
+    font-size: 19px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #354154;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+    background: #fff;
+    color: #202938;
+    font: inherit;
+    line-height: 1.6;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #98a2b1;
+}
+
+textarea:focus,
+select:focus {
+    border-color: #52647c;
+    outline: 3px solid rgb(82 100 124 / 14%);
+}
+
+button {
+    margin-top: 16px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 7px;
+    background: #283548;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+    background: #3a4a61;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus-visible {
+    outline: 3px solid rgb(82 100 124 / 35%);
+    outline-offset: 3px;
+}
+
+.result {
+    margin-top: 22px;
+}
+
+pre {
+    min-height: 100px;
+    margin: 0;
+    padding: 18px;
+    overflow-x: auto;
+    border: 1px solid #e5e9ef;
+    border-radius: 8px;
+    background: #f8f9fb;
+    color: #273449;
+    font: 14px/1.65 "Cascadia Code", Consolas, monospace;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    .workspace,
+    .result {
+        padding: 20px;
+    }
+}
