@@ -13,9 +13,11 @@ so the NVIDIA API key stays on the server and is never exposed to the browser.
 
 - Generate solutions from a problem description.
 - Select from Python, JavaScript, Java, C++, C#, Go, and Rust.
+- Keep questions and responses in a scrollable conversation for the current
+  page session.
 - Receive a problem understanding, approach, solution code, and complexity
   analysis.
-- Copy the solution code without its Markdown code fences.
+- Copy code from each response without its Markdown code fences.
 - Keep the NVIDIA API credential in a server-side environment variable.
 - Serve the frontend and API from the same Express application.
 

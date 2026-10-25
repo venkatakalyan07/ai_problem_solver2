@@ -34,7 +34,7 @@ Solve the following programming problem in ${language}. Provide:
 
 1. Problem understanding
 2. Approach
-3. Complete, readable solution code in ${language}
+3. Complete, readable solution code in ${language}, inside one fenced code block labeled ${language}
 4. Time complexity
 5. Space complexity
 
