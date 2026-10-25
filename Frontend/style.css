@@ -57,9 +57,38 @@ h1 {
     margin-bottom: 22px;
 }
 
+.result-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
 .section-heading h2 {
     margin: 0 0 6px;
     font-size: 19px;
+}
+
+.result-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.result-actions span {
+    color: #52647c;
+    font-size: 13px;
+}
+
+.copy-button {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 9px 13px;
+}
+
+.copy-button:disabled {
+    background: #98a2b1;
+    cursor: not-allowed;
 }
 
 label {
@@ -150,5 +179,13 @@ pre {
     .workspace,
     .result {
         padding: 20px;
+    }
+
+    .result-heading {
+        flex-wrap: wrap;
+    }
+
+    .result-actions {
+        flex-wrap: wrap;
     }
 }

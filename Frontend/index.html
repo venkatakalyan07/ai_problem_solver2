@@ -40,10 +40,14 @@
         </section>
 
         <section class="result" aria-labelledby="solution-heading">
-            <div class="section-heading">
+            <div class="section-heading result-heading">
                 <div>
                     <h2 id="solution-heading">Solution</h2>
                     <p>Your generated code will appear below.</p>
+                </div>
+                <div class="result-actions">
+                    <span id="copyStatus" aria-live="polite"></span>
+                    <button id="copyCodeBtn" class="copy-button" type="button" disabled>Copy code</button>
                 </div>
             </div>
             <pre id="solution"></pre>
