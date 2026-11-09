@@ -7,50 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <header class="page-header">
-            <span class="eyebrow">DEVELOPER TOOLS</span>
-            <h1>Code Workbench</h1>
-            <p>Describe a programming challenge and get a solution to work with.</p>
-        </header>
-        <section class="workspace" aria-labelledby="problem-heading">
-            <div class="section-heading">
-                <div>
-                    <h2 id="problem-heading">Problem</h2>
-                    <p>Include the requirements and any relevant details.</p>
-                </div>
+    <main class="container app-layout">
+        <aside class="history-panel" aria-labelledby="history-heading">
+            <div class="history-header">
+                <h2 id="history-heading">Chat history</h2>
+                <button id="newChatBtn" class="new-chat-button" type="button">New chat</button>
             </div>
-            <label for="language">Programming language</label>
-            <select id="language">
-                <option value="Python">Python</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Java">Java</option>
-                <option value="C++">C++</option>
-                <option value="C#">C#</option>
-                <option value="Go">Go</option>
-                <option value="Rust">Rust</option>
-            </select>
-            <label for="problem">Problem description</label>
-            <textarea
-                id="problem"
-                placeholder="Describe the programming problem you want to solve..."
-            ></textarea>
-            <p id="problemError" class="problem-error" role="alert"></p>
+            <p id="historyStatus" class="history-status" role="status">Loading saved conversations...</p>
+            <ul id="historyList" class="history-list" aria-label="Saved conversations"></ul>
+        </aside>
 
-            <button id="solveBtn" type="button">Generate solution</button>
-        </section>
-
-        <section class="conversation-panel" aria-labelledby="conversation-heading">
-            <div class="section-heading result-heading">
-                <div>
-                    <h2 id="conversation-heading">Conversation</h2>
-                    <p>Your questions and solutions will appear here.</p>
+        <div class="main-content">
+            <header class="page-header">
+                <span class="eyebrow">DEVELOPER TOOLS</span>
+                <h1>Code Workbench</h1>
+                <p>Describe a programming challenge and get a solution to work with.</p>
+            </header>
+            <p id="appError" class="app-error" role="alert"></p>
+            <section class="workspace" aria-labelledby="problem-heading">
+                <div class="section-heading">
+                    <div>
+                        <h2 id="problem-heading">Problem</h2>
+                        <p>Include the requirements and any relevant details.</p>
+                    </div>
                 </div>
-            </div>
-            <div id="conversationList" class="conversation-list" role="log" aria-live="polite" aria-relevant="additions">
-                <p id="conversationEmpty" class="conversation-empty">Ask a programming question to start a conversation.</p>
-            </div>
-        </section>
+                <form id="solveForm">
+                    <label for="language">Programming language</label>
+                    <select id="language">
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="C++">C++</option>
+                        <option value="C#">C#</option>
+                        <option value="Go">Go</option>
+                        <option value="Rust">Rust</option>
+                    </select>
+                    <label for="problem">Problem description</label>
+                    <textarea
+                        id="problem"
+                        placeholder="Describe the programming problem you want to solve..."
+                    ></textarea>
+                    <p id="problemError" class="problem-error" role="alert"></p>
+                    <button id="solveBtn" type="submit">Generate solution</button>
+                </form>
+            </section>
+
+            <section class="conversation-panel" aria-labelledby="conversation-heading">
+                <div class="section-heading result-heading">
+                    <div>
+                        <h2 id="conversation-heading">Conversation</h2>
+                        <p id="conversationDescription">Your questions and solutions will appear here.</p>
+                    </div>
+                </div>
+                <div id="conversationList" class="conversation-list" role="log" aria-live="polite" aria-relevant="additions">
+                    <p class="conversation-empty">Start a new chat or choose one from your history.</p>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

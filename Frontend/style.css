@@ -16,8 +16,113 @@ body {
 }
 
 .container {
-    width: min(100%, 840px);
+    width: min(100%, 1180px);
     margin: 0 auto;
+}
+
+.app-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.history-panel {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 18px;
+    border: 1px solid #e2e7ee;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(27 39 54 / 5%);
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.history-header h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.new-chat-button {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.history-status {
+    margin: 0 0 10px;
+    color: #697586;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.history-status:empty {
+    display: none;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-entry {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+}
+
+.history-select,
+.history-delete {
+    margin: 0;
+    background: transparent;
+    color: #354154;
+    text-align: left;
+}
+
+.history-select {
+    min-width: 0;
+    flex: 1;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.history-select:hover,
+.history-select[aria-current="true"] {
+    background: #eef2f7;
+    color: #202938;
+}
+
+.history-delete {
+    padding: 8px;
+    color: #697586;
+    font-size: 12px;
+}
+
+.history-delete:hover {
+    background: #fff0ef;
+    color: #b42318;
+}
+
+.main-content {
+    min-width: 0;
 }
 
 .page-header {
@@ -138,6 +243,17 @@ button:focus-visible {
     display: none;
 }
 
+.app-error {
+    margin: -14px 0 18px;
+    color: #b42318;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.app-error:empty {
+    display: none;
+}
+
 .conversation-list {
     display: flex;
     max-height: 65vh;
@@ -241,6 +357,16 @@ button:focus-visible {
 @media (max-width: 600px) {
     body {
         padding: 32px 16px;
+    }
+
+    .app-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .history-panel {
+        position: static;
+        max-height: 260px;
     }
 
     .workspace,
